@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Compnany: Codable {
-    let company, team: String
+struct Company: Codable {
+    let company: String
+    let team: String
     let members: [Member]
 }

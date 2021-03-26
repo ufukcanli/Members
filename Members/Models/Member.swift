@@ -10,6 +10,7 @@ import Foundation
 struct Member: Codable {
     let name: String
     let age: Int
-    let location, github: String
+    let location: String
+    let github: String
     let hipo: Hipo
 }
