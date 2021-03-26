@@ -13,6 +13,8 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configure()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,5 +25,11 @@ class ListViewController: UITableViewController {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "MemberCell")
         cell.textLabel?.text = String(company.members[indexPath.row].name)
         return cell
+    }
+    
+    private func configure() {
+        navigationItem.title = "Members"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.tableFooterView = UIView(frame: .zero)
     }
 }
