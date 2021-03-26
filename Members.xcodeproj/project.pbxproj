@@ -10,6 +10,10 @@
 		D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */; };
 		D2632F8B260E3DAF00CFAEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */; };
 		D2632F92260E3DB900CFAEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2632F91260E3DB900CFAEC6 /* Assets.xcassets */; };
+		D2632FA8260E43DC00CFAEC6 /* hipo.json in Resources */ = {isa = PBXBuildFile; fileRef = D2632FA7260E43DC00CFAEC6 /* hipo.json */; };
+		D2632FAB260E444900CFAEC6 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FAA260E444900CFAEC6 /* Member.swift */; };
+		D2632FAE260E446200CFAEC6 /* Hipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FAD260E446200CFAEC6 /* Hipo.swift */; };
+		D2632FB1260E449500CFAEC6 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB0260E449500CFAEC6 /* Company.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D2632F91260E3DB900CFAEC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2632F96260E3DBA00CFAEC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2632FA7260E43DC00CFAEC6 /* hipo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hipo.json; sourceTree = "<group>"; };
+		D2632FAA260E444900CFAEC6 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		D2632FAD260E446200CFAEC6 /* Hipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hipo.swift; sourceTree = "<group>"; };
+		D2632FB0260E449500CFAEC6 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +58,32 @@
 		D2632F87260E3DAF00CFAEC6 /* Members */ = {
 			isa = PBXGroup;
 			children = (
-				D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */,
-				D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */,
+				D2632FA2260E429600CFAEC6 /* Models */,
+				D2632F9F260E422D00CFAEC6 /* Supporting Files */,
 				D2632F91260E3DB900CFAEC6 /* Assets.xcassets */,
 				D2632F96260E3DBA00CFAEC6 /* Info.plist */,
 			);
 			path = Members;
+			sourceTree = "<group>";
+		};
+		D2632F9F260E422D00CFAEC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */,
+				D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2632FA2260E429600CFAEC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2632FB0260E449500CFAEC6 /* Company.swift */,
+				D2632FAA260E444900CFAEC6 /* Member.swift */,
+				D2632FAD260E446200CFAEC6 /* Hipo.swift */,
+				D2632FA7260E43DC00CFAEC6 /* hipo.json */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2632F92260E3DB900CFAEC6 /* Assets.xcassets in Resources */,
+				D2632FA8260E43DC00CFAEC6 /* hipo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */,
+				D2632FAE260E446200CFAEC6 /* Hipo.swift in Sources */,
+				D2632FAB260E444900CFAEC6 /* Member.swift in Sources */,
+				D2632FB1260E449500CFAEC6 /* Company.swift in Sources */,
 				D2632F8B260E3DAF00CFAEC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
