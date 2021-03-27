@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2212A7C260F86510038E79B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A7B260F86510038E79B /* ListViewModel.swift */; };
 		D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */; };
 		D2632F8B260E3DAF00CFAEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */; };
 		D2632F92260E3DB900CFAEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2632F91260E3DB900CFAEC6 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2212A7B260F86510038E79B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D2632F85260E3DAF00CFAEC6 /* Members.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Members.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		D2632FB3260E454200CFAEC6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D2212A7B260F86510038E79B /* ListViewModel.swift */,
 				D2632FB4260E459900CFAEC6 /* ListViewController.swift */,
 			);
 			path = Screens;
@@ -209,6 +212,7 @@
 				D2965FB5260F62410009F9A4 /* UCTitleLabel.swift in Sources */,
 				D2965FB2260F4B270009F9A4 /* MemberCell.swift in Sources */,
 				D2965FAF260F42460009F9A4 /* UIButton+Extension.swift in Sources */,
+				D2212A7C260F86510038E79B /* ListViewModel.swift in Sources */,
 				D2965FAB260F3BF30009F9A4 /* UCButton.swift in Sources */,
 				D2632FB1260E449500CFAEC6 /* Company.swift in Sources */,
 				D2632F8B260E3DAF00CFAEC6 /* SceneDelegate.swift in Sources */,

@@ -13,7 +13,7 @@ class ListViewController: UITableViewController {
     private lazy var addButton = UCButton(backgroundColor: .systemGreen, title: "Add New Member")
     private lazy var buttonStackView = UIStackView(arrangedSubviews: [sortButton, addButton])
     
-    private var company = Bundle.main.decode(Company.self, from: "hipo.json", keyDecodingStrategy: .convertFromSnakeCase)
+    private var viewModel = ListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class ListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return company.members.count
+        return viewModel.numberOfRowsInSection
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MemberCell.reuseIdentifier, for: indexPath) as! MemberCell
-        let member = company.members[indexPath.row]
+        let member = viewModel.member(at: indexPath.row)
         cell.update(with: member)
         return cell
     }
