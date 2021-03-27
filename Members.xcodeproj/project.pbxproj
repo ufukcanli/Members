@@ -13,6 +13,7 @@
 		D2212A8B260F9A340038E79B /* UCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A8A260F9A340038E79B /* UCError.swift */; };
 		D2212A8F260F9FBC0038E79B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A8E260F9FBC0038E79B /* Bundle+Extension.swift */; };
 		D2212A92260FA5BD0038E79B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A91260FA5BD0038E79B /* UIViewController+Extension.swift */; };
+		D2212A97260FB8A30038E79B /* EmptyStateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A96260FB8A30038E79B /* EmptyStateLabel.swift */; };
 		D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */; };
 		D2632F8B260E3DAF00CFAEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */; };
 		D2632F92260E3DB900CFAEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2632F91260E3DB900CFAEC6 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		D2212A8A260F9A340038E79B /* UCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCError.swift; sourceTree = "<group>"; };
 		D2212A8E260F9FBC0038E79B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		D2212A91260FA5BD0038E79B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D2212A96260FB8A30038E79B /* EmptyStateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateLabel.swift; sourceTree = "<group>"; };
 		D2632F85260E3DAF00CFAEC6 /* Members.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Members.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,31 @@
 				D2632FB4260E459900CFAEC6 /* ListViewController.swift */,
 			);
 			path = Members;
+			sourceTree = "<group>";
+		};
+		D2212A99260FB8AA0038E79B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D2965FAA260F3BF30009F9A4 /* UCButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		D2212A9B260FB8B70038E79B /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				D2965FB4260F62410009F9A4 /* UCTitleLabel.swift */,
+				D2212A96260FB8A30038E79B /* EmptyStateLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		D2212A9D260FB8C90038E79B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2965FB1260F4B270009F9A4 /* MemberCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D2632F7C260E3DAF00CFAEC6 = {
@@ -163,9 +190,9 @@
 		D2965FA9260F3AD60009F9A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D2965FAA260F3BF30009F9A4 /* UCButton.swift */,
-				D2965FB4260F62410009F9A4 /* UCTitleLabel.swift */,
-				D2965FB1260F4B270009F9A4 /* MemberCell.swift */,
+				D2212A99260FB8AA0038E79B /* Buttons */,
+				D2212A9B260FB8B70038E79B /* Labels */,
+				D2212A9D260FB8C90038E79B /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +278,7 @@
 				D2965FB5260F62410009F9A4 /* UCTitleLabel.swift in Sources */,
 				D2965FB2260F4B270009F9A4 /* MemberCell.swift in Sources */,
 				D2965FAF260F42460009F9A4 /* UIButton+Extension.swift in Sources */,
+				D2212A97260FB8A30038E79B /* EmptyStateLabel.swift in Sources */,
 				D2212A7C260F86510038E79B /* ListViewModel.swift in Sources */,
 				D2212A81260F8C040038E79B /* Observable.swift in Sources */,
 				D2965FAB260F3BF30009F9A4 /* UCButton.swift in Sources */,

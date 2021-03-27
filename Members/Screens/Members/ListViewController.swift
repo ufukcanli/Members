@@ -12,6 +12,7 @@ class ListViewController: UITableViewController {
     private lazy var sortButton = UCButton(backgroundColor: .customBlack, title: "Sort Members")
     private lazy var addButton = UCButton(backgroundColor: .systemGreen, title: "Add New Member")
     private lazy var buttonStackView = UIStackView(arrangedSubviews: [sortButton, addButton])
+    private let emptyStateLabel = EmptyStateLabel()
     
     private var viewModel = ListViewModel()
     
@@ -47,6 +48,7 @@ class ListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        emptyStateLabel.isHidden = viewModel.emptyStateLabelIsHidden
         return viewModel.numberOfRowsInSection
     }
     
@@ -94,10 +96,15 @@ class ListViewController: UITableViewController {
         buttonStackView.spacing = 15
         view.addSubview(buttonStackView)
         
+        view.addSubview(emptyStateLabel)
+        
         NSLayoutConstraint.activate([
             buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding)
+            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding),
+            
+            emptyStateLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
+            emptyStateLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
