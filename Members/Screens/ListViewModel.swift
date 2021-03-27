@@ -13,14 +13,7 @@ final class ListViewModel {
     private(set) var error = Observable<UCError?>(nil)
     
     init() {
-        let company = Bundle.main.decode(Company.self,
-                                         from: "hipo.json",
-                                         keyDecodingStrategy: .convertFromSnakeCase)
-        
-        if let error = PersistenceManager.save(members: company.members) {
-            self.error.value = error
-        }
-        
+        checkUser()
         fetchMembers()
     }
     
@@ -57,6 +50,20 @@ final class ListViewModel {
             case .failure(let error):
                 self?.error.value = error
             }
+        }
+    }
+    
+    private func checkUser() {
+        if !PersistenceManager.hasUser() {
+            let company = Bundle.main.decode(Company.self,
+                                             from: "hipo.json",
+                                             keyDecodingStrategy: .convertFromSnakeCase)
+            
+            if let error = PersistenceManager.save(members: company.members) {
+                self.error.value = error
+            }
+            
+            PersistenceManager.setUser()
         }
     }
 }

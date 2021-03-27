@@ -17,6 +17,7 @@ enum PersistenceManager {
     
     enum Keys {
         static let members = "members"
+        static let user = "user"
     }
     
     static func update(with member: Member, actionType: PersistenceActionType, completion: @escaping (UCError?) -> Void) {
@@ -63,5 +64,13 @@ enum PersistenceManager {
         } catch {
             return .unableToAddNewMember
         }
+    }
+    
+    static func setUser() {
+        defaults.set(true, forKey: Keys.user)
+    }
+    
+    static func hasUser() -> Bool {
+        defaults.bool(forKey: Keys.user)
     }
 }
