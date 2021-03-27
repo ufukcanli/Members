@@ -25,6 +25,16 @@ final class ListViewModel {
         let member = members.value[index]
         return member
     }
+    
+    func removeMember(at index: Int) {
+        let member = members.value[index]
+        
+        PersistenceManager.update(with: member, actionType: .remove) { [weak self] error in
+            self?.error.value = error
+        }
+        
+        fetchMembers()
+    }
             
     func addNewMember() {
         let newMember = Member(name: "Ufuk Canlı",
@@ -40,7 +50,7 @@ final class ListViewModel {
         
         fetchMembers()
     }
-    
+        
     private func fetchMembers() {
         PersistenceManager.retrieveMembers { [weak self] result in
             switch result {

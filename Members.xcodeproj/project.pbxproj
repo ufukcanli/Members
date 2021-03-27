@@ -82,6 +82,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		D2212A94260FB2790038E79B /* Members */ = {
+			isa = PBXGroup;
+			children = (
+				D2212A7B260F86510038E79B /* ListViewModel.swift */,
+				D2632FB4260E459900CFAEC6 /* ListViewController.swift */,
+			);
+			path = Members;
+			sourceTree = "<group>";
+		};
 		D2632F7C260E3DAF00CFAEC6 = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +144,7 @@
 		D2632FB3260E454200CFAEC6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D2212A7B260F86510038E79B /* ListViewModel.swift */,
-				D2632FB4260E459900CFAEC6 /* ListViewController.swift */,
+				D2212A94260FB2790038E79B /* Members */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
