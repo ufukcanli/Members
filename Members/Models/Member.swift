@@ -14,3 +14,10 @@ struct Member: Codable {
     let github: String
     let hipo: Hipo
 }
+
+let sampleMember = Member(name: "John Doe",
+                          age: 33,
+                          location: "London",
+                          github: "@johndoe",
+                          hipo: Hipo(position: "iOS",
+                                     yearsInHipo: 3))

@@ -9,40 +9,26 @@ import Foundation
 
 final class ListViewModel {
     
-    private var company = Observable<Company?>(nil)
+    private let manager = PersistenceManager()
+    private(set) var company = Observable<Company?>(nil)
     
     init() {
-        company.value = Bundle.main.decode(Company.self,
-                                           from: "hipo.json",
-                                           keyDecodingStrategy: .convertFromSnakeCase)
+        company.value = manager.loadData()
     }
     
     var numberOfRowsInSection: Int {
-        company.value?.members.count ?? 0
-    }
-    
-    func member(at index: Int) -> Member {
-        (company.value?.members[index])!
-    }
-}
-
-final class Observable<T> {
-    
-    typealias Observer = (T) -> Void
-    var observer: Observer?
-    
-    var value: T {
-        didSet {
-            observer?(value)
+        if let number = company.value?.members.count {
+            return number
+        } else {
+            return 0
         }
     }
     
-    init(_ value: T) {
-        self.value = value
-    }
-    
-    func bind(observer: Observer?) {
-        self.observer = observer
-        observer?(value)
+    func member(at index: Int) -> Member {
+        if let member = company.value?.members[index] {
+            return member
+        } else {
+            return sampleMember
+        }
     }
 }

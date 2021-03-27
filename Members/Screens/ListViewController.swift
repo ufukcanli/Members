@@ -17,7 +17,7 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         configure()
     }
     

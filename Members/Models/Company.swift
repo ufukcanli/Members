@@ -12,3 +12,12 @@ struct Company: Codable {
     let team: String
     let members: [Member]
 }
+
+let sampleCompany = Company(company: "Hipo",
+                            team: "iOS",
+                            members: [Member(name: "John Doe",
+                                             age: 33,
+                                             location: "London",
+                                             github: "@johndoe",
+                                             hipo: Hipo(position: "iOS",
+                                                        yearsInHipo: 3))])

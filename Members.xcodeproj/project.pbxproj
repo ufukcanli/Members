@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D2212A7C260F86510038E79B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A7B260F86510038E79B /* ListViewModel.swift */; };
+		D2212A81260F8C040038E79B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A80260F8C040038E79B /* Observable.swift */; };
+		D2212A87260F8E470038E79B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2212A86260F8E470038E79B /* PersistenceManager.swift */; };
 		D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */; };
 		D2632F8B260E3DAF00CFAEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */; };
 		D2632F92260E3DB900CFAEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2632F91260E3DB900CFAEC6 /* Assets.xcassets */; };
@@ -16,7 +18,6 @@
 		D2632FAE260E446200CFAEC6 /* Hipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FAD260E446200CFAEC6 /* Hipo.swift */; };
 		D2632FB1260E449500CFAEC6 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB0260E449500CFAEC6 /* Company.swift */; };
 		D2632FB5260E459900CFAEC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB4260E459900CFAEC6 /* ListViewController.swift */; };
-		D2632FB9260E471000CFAEC6 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB8260E471000CFAEC6 /* Bundle+Extension.swift */; };
 		D2965FAB260F3BF30009F9A4 /* UCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FAA260F3BF30009F9A4 /* UCButton.swift */; };
 		D2965FAF260F42460009F9A4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */; };
 		D2965FB2260F4B270009F9A4 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FB1260F4B270009F9A4 /* MemberCell.swift */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		D2212A7B260F86510038E79B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D2212A80260F8C040038E79B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D2212A86260F8E470038E79B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		D2632F85260E3DAF00CFAEC6 /* Members.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Members.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		D2632FAD260E446200CFAEC6 /* Hipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hipo.swift; sourceTree = "<group>"; };
 		D2632FB0260E449500CFAEC6 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		D2632FB4260E459900CFAEC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		D2632FB8260E471000CFAEC6 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		D2965FAA260F3BF30009F9A4 /* UCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCButton.swift; sourceTree = "<group>"; };
 		D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		D2965FB1260F4B270009F9A4 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
@@ -55,6 +57,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2212A7F260F8BE50038E79B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D2212A80260F8C040038E79B /* Observable.swift */,
+				D2212A85260F8E270038E79B /* Managers */,
+				D2632FB7260E46F200CFAEC6 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D2212A85260F8E270038E79B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D2212A86260F8E470038E79B /* PersistenceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		D2632F7C260E3DAF00CFAEC6 = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +97,7 @@
 				D2632FA2260E429600CFAEC6 /* Models */,
 				D2965FA9260F3AD60009F9A4 /* Views */,
 				D2632FB3260E454200CFAEC6 /* Screens */,
-				D2632FB7260E46F200CFAEC6 /* Extensions */,
+				D2212A7F260F8BE50038E79B /* Utilities */,
 				D2632F9F260E422D00CFAEC6 /* Supporting Files */,
 				D2632F91260E3DB900CFAEC6 /* Assets.xcassets */,
 				D2632F96260E3DBA00CFAEC6 /* Info.plist */,
@@ -117,7 +137,6 @@
 		D2632FB7260E46F200CFAEC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D2632FB8260E471000CFAEC6 /* Bundle+Extension.swift */,
 				D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */,
 				D2965FB8260F6BE90009F9A4 /* UIColor+Extension.swift */,
 			);
@@ -204,15 +223,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */,
-				D2632FB9260E471000CFAEC6 /* Bundle+Extension.swift in Sources */,
 				D2632FAE260E446200CFAEC6 /* Hipo.swift in Sources */,
 				D2965FB9260F6BEA0009F9A4 /* UIColor+Extension.swift in Sources */,
 				D2632FB5260E459900CFAEC6 /* ListViewController.swift in Sources */,
 				D2632FAB260E444900CFAEC6 /* Member.swift in Sources */,
+				D2212A87260F8E470038E79B /* PersistenceManager.swift in Sources */,
 				D2965FB5260F62410009F9A4 /* UCTitleLabel.swift in Sources */,
 				D2965FB2260F4B270009F9A4 /* MemberCell.swift in Sources */,
 				D2965FAF260F42460009F9A4 /* UIButton+Extension.swift in Sources */,
 				D2212A7C260F86510038E79B /* ListViewModel.swift in Sources */,
+				D2212A81260F8C040038E79B /* Observable.swift in Sources */,
 				D2965FAB260F3BF30009F9A4 /* UCButton.swift in Sources */,
 				D2632FB1260E449500CFAEC6 /* Company.swift in Sources */,
 				D2632F8B260E3DAF00CFAEC6 /* SceneDelegate.swift in Sources */,
