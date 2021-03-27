@@ -34,9 +34,18 @@ class ListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "MemberCell")
-        cell.textLabel?.text = String(company.members[indexPath.row].name)
+        let cell = tableView.dequeueReusableCell(withIdentifier: MemberCell.reuseIdentifier, for: indexPath) as! MemberCell
+        let member = company.members[indexPath.row]
+        cell.update(with: member)
         return cell
+    }
+        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
     }
     
     private func configure() {
@@ -44,7 +53,9 @@ class ListViewController: UITableViewController {
         
         navigationItem.title = "Members"
         navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.tableFooterView = UIView(frame: .zero)
+        
+        tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(MemberCell.self, forCellReuseIdentifier: MemberCell.reuseIdentifier)
         
         addButton.addTarget(self, action: #selector(didTapAddButton), for: .touchUpInside)
         sortButton.addTarget(self, action: #selector(didTapSortButton), for: .touchUpInside)
