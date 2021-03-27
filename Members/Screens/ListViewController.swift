@@ -9,7 +9,7 @@ import UIKit
 
 class ListViewController: UITableViewController {
     
-    private lazy var sortButton = UCButton(backgroundColor: .black, title: "Sort Members")
+    private lazy var sortButton = UCButton(backgroundColor: .customBlack, title: "Sort Members")
     private lazy var addButton = UCButton(backgroundColor: .systemGreen, title: "Add New Member")
     private lazy var buttonStackView = UIStackView(arrangedSubviews: [sortButton, addButton])
     

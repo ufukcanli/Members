@@ -20,6 +20,7 @@
 		D2965FAF260F42460009F9A4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */; };
 		D2965FB2260F4B270009F9A4 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FB1260F4B270009F9A4 /* MemberCell.swift */; };
 		D2965FB5260F62410009F9A4 /* UCTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FB4260F62410009F9A4 /* UCTitleLabel.swift */; };
+		D2965FB9260F6BEA0009F9A4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FB8260F6BE90009F9A4 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		D2965FB1260F4B270009F9A4 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		D2965FB4260F62410009F9A4 /* UCTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCTitleLabel.swift; sourceTree = "<group>"; };
+		D2965FB8260F6BE90009F9A4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				D2632FB8260E471000CFAEC6 /* Bundle+Extension.swift */,
 				D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */,
+				D2965FB8260F6BE90009F9A4 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */,
 				D2632FB9260E471000CFAEC6 /* Bundle+Extension.swift in Sources */,
 				D2632FAE260E446200CFAEC6 /* Hipo.swift in Sources */,
+				D2965FB9260F6BEA0009F9A4 /* UIColor+Extension.swift in Sources */,
 				D2632FB5260E459900CFAEC6 /* ListViewController.swift in Sources */,
 				D2632FAB260E444900CFAEC6 /* Member.swift in Sources */,
 				D2965FB5260F62410009F9A4 /* UCTitleLabel.swift in Sources */,
