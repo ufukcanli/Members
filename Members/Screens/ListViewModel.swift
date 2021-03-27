@@ -43,8 +43,8 @@ final class ListViewModel {
                             self?.members.value = members
                         }
                         
-                case .failure( _): break
-                    // show alert
+                case .failure(let error):
+                    self?.error.value = error
                 }
             }
         }

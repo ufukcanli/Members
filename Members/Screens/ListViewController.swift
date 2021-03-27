@@ -17,14 +17,24 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel.members.bind { [weak self] _ in
+                
+        bind()
+        configure()
+    }
+    
+    private func bind() {
+        viewModel.members.bind { [weak self] members in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
         }
-                
-        configure()
+        viewModel.error.bind { [weak self] error in
+            if let error = error {
+                self?.presentAlertOnMainThread(title: "Something went wrong 🤪",
+                                               message: error.rawValue,
+                                               buttonTitle: "Ok")
+            }
+        }
     }
     
     @objc private func didTapSortButton() {
