@@ -54,6 +54,14 @@ final class ListViewModel {
         
         fetchMembers()
     }
+    
+    func restore() {
+        if PersistenceManager.hasUser() {
+            PersistenceManager.setUserFalse()
+            initialize()
+            fetchMembers()
+        }
+    }
         
     private func fetchMembers() {
         PersistenceManager.retrieveMembers { [weak self] result in
@@ -69,15 +77,18 @@ final class ListViewModel {
     
     private func checkUser() {
         if !PersistenceManager.hasUser() {
-            let company = Bundle.main.decode(Company.self,
-                                             from: "hipo.json",
-                                             keyDecodingStrategy: .convertFromSnakeCase)
-            
-            if let error = PersistenceManager.save(members: company.members) {
-                self.error.value = error
-            }
-            
-            PersistenceManager.setUser()
+            PersistenceManager.setUserTrue()
+            initialize()
+        }
+    }
+    
+    private func initialize() {
+        let company = Bundle.main.decode(Company.self,
+                                         from: "hipo.json",
+                                         keyDecodingStrategy: .convertFromSnakeCase)
+        
+        if let error = PersistenceManager.save(members: company.members) {
+            self.error.value = error
         }
     }
 }

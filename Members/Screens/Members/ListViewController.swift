@@ -24,10 +24,8 @@ class ListViewController: UITableViewController {
     }
     
     private func bind() {
-        viewModel.members.bind { [weak self] members in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
+        viewModel.members.bind { [weak self] _ in
+            DispatchQueue.main.async { self?.tableView.reloadData() }
         }
         viewModel.error.bind { [weak self] error in
             if let error = error {
@@ -45,6 +43,10 @@ class ListViewController: UITableViewController {
     @objc private func didTapAddButton() {
         addButton.startAnimatingPressActions()
         viewModel.addNewMember()
+    }
+    
+    @objc private func didTapRestoreButton() {
+        viewModel.restore()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,6 +85,10 @@ class ListViewController: UITableViewController {
         
         navigationItem.title = "Members"
         navigationController?.navigationBar.prefersLargeTitles = true
+        let restoreImage = UIImage(systemName: "wand.and.stars")
+        let restoreButton = UIBarButtonItem(image: restoreImage, style: .plain, target: self, action: #selector(didTapRestoreButton))
+        restoreButton.tintColor = .systemGreen
+        navigationItem.rightBarButtonItem = restoreButton
         
         tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.register(MemberCell.self, forCellReuseIdentifier: MemberCell.reuseIdentifier)

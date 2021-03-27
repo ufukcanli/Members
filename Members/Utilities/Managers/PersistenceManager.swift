@@ -66,7 +66,11 @@ enum PersistenceManager {
         }
     }
     
-    static func setUser() {
+    static func setUserTrue() {
+        defaults.set(true, forKey: Keys.user)
+    }
+    
+    static func setUserFalse() {
         defaults.set(true, forKey: Keys.user)
     }
     
