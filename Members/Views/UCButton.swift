@@ -31,11 +31,10 @@ class UCButton: UIButton {
         layer.cornerRadius = 25
         layer.shadowRadius = 7
         layer.shadowOpacity = 0.6
-        layer.shadowOffset = CGSize(width: 0, height: 4)
+        layer.shadowOffset = CGSize(width: 0, height: 3)
         layer.shadowColor = UIColor.darkGray.cgColor
         
         setTitleColor(.white, for: .normal)
-        setTitleColor(UIColor(white: 1, alpha: 0.3), for: .highlighted)
         titleLabel?.font = .preferredFont(forTextStyle: .headline)
         
         translatesAutoresizingMaskIntoConstraints = false
