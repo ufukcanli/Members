@@ -18,6 +18,5 @@ struct Member: Codable, Hashable {
 let sampleMember = Member(name: "John Doe",
                           age: 33,
                           location: "London",
-                          github: "@johndoe",
-                          hipo: Hipo(position: "iOS",
-                                     yearsInHipo: 3))
+                          github: "johndoe",
+                          hipo: sampleHipo)

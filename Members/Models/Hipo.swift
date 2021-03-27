@@ -11,3 +11,5 @@ struct Hipo: Codable, Hashable {
     let position: String
     let yearsInHipo: Int
 }
+
+let sampleHipo = Hipo(position: "iOS", yearsInHipo: 3)

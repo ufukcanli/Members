@@ -44,7 +44,7 @@ final class ListViewModel {
         let newMember = Member(name: "Ufuk Canlı",
                                age: 24,
                                location: "Düziçi, Osmaniye",
-                               github: "@github",
+                               github: "ufukcanli",
                                hipo: Hipo(position: "intern",
                                           yearsInHipo: 0))
         
