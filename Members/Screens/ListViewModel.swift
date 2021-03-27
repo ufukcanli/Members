@@ -9,26 +9,59 @@ import Foundation
 
 final class ListViewModel {
     
-    private let manager = PersistenceManager()
-    private(set) var company = Observable<Company?>(nil)
+    private(set) var members = Observable<[Member]>([])
+    private(set) var error = Observable<UCError?>(nil)
     
     init() {
-        company.value = manager.loadData()
+        let company = Bundle.main.decode(Company.self,
+                                         from: "hipo.json",
+                                         keyDecodingStrategy: .convertFromSnakeCase)
+        
+        if let error = PersistenceManager.save(members: company.members) {
+            self.error.value = error
+        }
+        
+        fetchMembers()
     }
     
     var numberOfRowsInSection: Int {
-        if let number = company.value?.members.count {
-            return number
-        } else {
-            return 0
-        }
+        members.value.count
     }
     
     func member(at index: Int) -> Member {
-        if let member = company.value?.members[index] {
-            return member
-        } else {
-            return sampleMember
-        }
+        let member = members.value[index]
+        return member
     }
+        
+    func fetchMembers() {
+            PersistenceManager.retrieveMembers { [weak self] result in
+                switch result {
+                    case .success(let members):
+                        if members.isEmpty {
+                            // show empty state
+                        } else {
+                            self?.members.value = members
+                        }
+                        
+                case .failure( _): break
+                    // show alert
+                }
+            }
+        }
+    
+    func addNewMember() {
+        let newMember = Member(name: "Ufuk Canlı",
+                               age: 24,
+                               location: "Düziçi, Osmaniye",
+                               github: "@github",
+                               hipo: Hipo(position: "iOS",
+                                          yearsInHipo: 0))
+        
+        PersistenceManager.update(with: newMember, actionType: .add) { [weak self] error in
+            self?.error.value = error
+        }
+        
+        fetchMembers()
+    }
+        
 }

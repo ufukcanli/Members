@@ -17,6 +17,12 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.members.bind { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
                 
         configure()
     }
@@ -27,6 +33,7 @@ class ListViewController: UITableViewController {
     
     @objc private func didTapAddButton() {
         addButton.startAnimatingPressActions()
+        viewModel.addNewMember()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

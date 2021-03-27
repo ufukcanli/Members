@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Hipo: Codable {
+struct Hipo: Codable, Hashable {
     let position: String
     let yearsInHipo: Int
 }
