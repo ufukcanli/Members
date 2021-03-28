@@ -23,6 +23,7 @@
 		D2632FB1260E449500CFAEC6 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB0260E449500CFAEC6 /* Company.swift */; };
 		D2632FB5260E459900CFAEC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB4260E459900CFAEC6 /* ListViewController.swift */; };
 		D263888826108CC6009C6F55 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263888726108CC6009C6F55 /* DetailsView.swift */; };
+		D26388912610A959009C6F55 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26388902610A959009C6F55 /* String+Extension.swift */; };
 		D2965FAB260F3BF30009F9A4 /* UCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FAA260F3BF30009F9A4 /* UCButton.swift */; };
 		D2965FAF260F42460009F9A4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */; };
 		D2965FB2260F4B270009F9A4 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FB1260F4B270009F9A4 /* MemberCell.swift */; };
@@ -49,6 +50,7 @@
 		D2632FB0260E449500CFAEC6 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		D2632FB4260E459900CFAEC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D263888726108CC6009C6F55 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		D26388902610A959009C6F55 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D2965FAA260F3BF30009F9A4 /* UCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCButton.swift; sourceTree = "<group>"; };
 		D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		D2965FB1260F4B270009F9A4 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				D2965FB8260F6BE90009F9A4 /* UIColor+Extension.swift */,
 				D2212A8E260F9FBC0038E79B /* Bundle+Extension.swift */,
 				D2212A91260FA5BD0038E79B /* UIViewController+Extension.swift */,
+				D26388902610A959009C6F55 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				D2212A92260FA5BD0038E79B /* UIViewController+Extension.swift in Sources */,
 				D2965FB9260F6BEA0009F9A4 /* UIColor+Extension.swift in Sources */,
 				D2632FB5260E459900CFAEC6 /* ListViewController.swift in Sources */,
+				D26388912610A959009C6F55 /* String+Extension.swift in Sources */,
 				D2632FAB260E444900CFAEC6 /* Member.swift in Sources */,
 				D2212A87260F8E470038E79B /* PersistenceManager.swift in Sources */,
 				D2965FB5260F62410009F9A4 /* UCTitleLabel.swift in Sources */,
