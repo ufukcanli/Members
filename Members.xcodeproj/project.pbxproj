@@ -22,6 +22,7 @@
 		D2632FAE260E446200CFAEC6 /* Hipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FAD260E446200CFAEC6 /* Hipo.swift */; };
 		D2632FB1260E449500CFAEC6 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB0260E449500CFAEC6 /* Company.swift */; };
 		D2632FB5260E459900CFAEC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2632FB4260E459900CFAEC6 /* ListViewController.swift */; };
+		D263888826108CC6009C6F55 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263888726108CC6009C6F55 /* DetailsView.swift */; };
 		D2965FAB260F3BF30009F9A4 /* UCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FAA260F3BF30009F9A4 /* UCButton.swift */; };
 		D2965FAF260F42460009F9A4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */; };
 		D2965FB2260F4B270009F9A4 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2965FB1260F4B270009F9A4 /* MemberCell.swift */; };
@@ -47,6 +48,7 @@
 		D2632FAD260E446200CFAEC6 /* Hipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hipo.swift; sourceTree = "<group>"; };
 		D2632FB0260E449500CFAEC6 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		D2632FB4260E459900CFAEC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D263888726108CC6009C6F55 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		D2965FAA260F3BF30009F9A4 /* UCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCButton.swift; sourceTree = "<group>"; };
 		D2965FAE260F42460009F9A4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		D2965FB1260F4B270009F9A4 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				D2212A7B260F86510038E79B /* ListViewModel.swift */,
 				D2632FB4260E459900CFAEC6 /* ListViewController.swift */,
+				D263887D26108C18009C6F55 /* Details */,
 			);
 			path = Members;
 			sourceTree = "<group>";
@@ -187,6 +190,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D263887D26108C18009C6F55 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				D263888726108CC6009C6F55 /* DetailsView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		D2965FA9260F3AD60009F9A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2212A8B260F9A340038E79B /* UCError.swift in Sources */,
+				D263888826108CC6009C6F55 /* DetailsView.swift in Sources */,
 				D2632F89260E3DAF00CFAEC6 /* AppDelegate.swift in Sources */,
 				D2632FAE260E446200CFAEC6 /* Hipo.swift in Sources */,
 				D2212A8F260F9FBC0038E79B /* Bundle+Extension.swift in Sources */,

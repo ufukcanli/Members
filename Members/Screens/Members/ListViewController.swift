@@ -5,7 +5,7 @@
 //  Created by Ufuk Canlı on 26.03.2021.
 //
 
-import UIKit
+import SwiftUI
 
 class ListViewController: UITableViewController {
     
@@ -63,6 +63,9 @@ class ListViewController: UITableViewController {
         
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let member = viewModel.member(at: indexPath.row)
+        let hostingController = UIHostingController(rootView: DetailsView(member: member))
+        navigationController?.pushViewController(hostingController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
