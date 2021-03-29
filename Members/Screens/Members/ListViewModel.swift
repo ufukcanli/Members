@@ -91,4 +91,15 @@ final class ListViewModel {
             self.error.value = error
         }
     }
+    
+    private func sort(_ array: [String], using character: Character) -> [String] {
+        let sortedArray = array.sorted { first, second in
+            if first.count(character) > second.count(character) {
+                return true
+            } else {
+                return false
+            }
+        }
+        return sortedArray
+    }
 }
