@@ -8,4 +8,6 @@ While doing the job using code, I try to do my best keep my view controllers cle
 
 Although nobody asked me to the detail screen, I wanted this app to have a simple detail screen. I've been trying SwiftUI for few weeks and I wanted to use it in this project. I believe SwiftUI is so close to be production ready, I can't wait the make apps with it. It does a lot of job under the hood so you can build stuff in a short amount of time. This is awesome especially for indie developers.
 
+And if you keep digging, you can find some extra features too like deleting member, restoring list, empty state message and etc.
+
 I believe I did a great job in few days. I wanted to finish the project as soon as possible because midterms are coming 😅 Thank you for this opportunity and please feel free to ask me about more specific things. Can't wait the meet you all!
