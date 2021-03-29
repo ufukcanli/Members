@@ -9,9 +9,9 @@ import Foundation
 
 extension String {
     // the number of occurrences of a character in a string.
-    func count(_ character: Character, in string: String) -> Int {
+    func count(_ character: Character) -> Int {
         var count = 0
-        for letter in string {
+        for letter in self {
             if letter == character {
                 count += 1
             }
