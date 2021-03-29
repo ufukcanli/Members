@@ -55,6 +55,18 @@ final class ListViewModel {
         fetchMembers()
     }
     
+    func sortMembers() {
+        let sortedMembers = members.value.sorted { member1, member2 -> Bool in
+            if member1.name.components(separatedBy: " ").last!.count("a")
+                > member2.name.components(separatedBy: " ").last!.count("a") {
+                return true
+            } else {
+                return false
+            }
+        }
+        members.value = sortedMembers
+    }
+    
     func restore() {
         if PersistenceManager.hasUser() {
             PersistenceManager.setUserFalse()
@@ -92,6 +104,7 @@ final class ListViewModel {
         }
     }
     
+    // I couldn't find a way to use this function because of the data model that is given.
     private func sort(_ array: [String], using character: Character) -> [String] {
         let sortedArray = array.sorted { first, second in
             if first.count(character) > second.count(character) {

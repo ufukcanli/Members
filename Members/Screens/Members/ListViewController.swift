@@ -38,6 +38,7 @@ class ListViewController: UITableViewController {
     
     @objc private func didTapSortButton() {
         sortButton.startAnimatingPressActions()
+        viewModel.sortMembers()
     }
     
     @objc private func didTapAddButton() {
