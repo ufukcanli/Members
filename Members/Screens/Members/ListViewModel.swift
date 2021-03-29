@@ -79,7 +79,7 @@ final class ListViewModel {
         PersistenceManager.retrieveMembers { [weak self] result in
             switch result {
             case .success(let members):
-                    self?.members.value = members
+                self?.members.value = members
 
             case .failure(let error):
                 self?.error.value = error

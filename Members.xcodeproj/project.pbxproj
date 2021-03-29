@@ -39,6 +39,7 @@
 		D2212A8E260F9FBC0038E79B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		D2212A91260FA5BD0038E79B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D2212A96260FB8A30038E79B /* EmptyStateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateLabel.swift; sourceTree = "<group>"; };
+		D25426602611C51A001C2057 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2632F85260E3DAF00CFAEC6 /* Members.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Members.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2632F88260E3DAF00CFAEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2632F8A260E3DAF00CFAEC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 				D2632F9F260E422D00CFAEC6 /* Supporting Files */,
 				D2632F91260E3DB900CFAEC6 /* Assets.xcassets */,
 				D2632F96260E3DBA00CFAEC6 /* Info.plist */,
+				D25426602611C51A001C2057 /* README.md */,
 			);
 			path = Members;
 			sourceTree = "<group>";
