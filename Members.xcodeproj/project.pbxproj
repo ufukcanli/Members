@@ -127,6 +127,7 @@
 		D2632F7C260E3DAF00CFAEC6 = {
 			isa = PBXGroup;
 			children = (
+				D25426602611C51A001C2057 /* README.md */,
 				D2632F87260E3DAF00CFAEC6 /* Members */,
 				D2632F86260E3DAF00CFAEC6 /* Products */,
 			);
@@ -150,7 +151,6 @@
 				D2632F9F260E422D00CFAEC6 /* Supporting Files */,
 				D2632F91260E3DB900CFAEC6 /* Assets.xcassets */,
 				D2632F96260E3DBA00CFAEC6 /* Info.plist */,
-				D25426602611C51A001C2057 /* README.md */,
 			);
 			path = Members;
 			sourceTree = "<group>";
